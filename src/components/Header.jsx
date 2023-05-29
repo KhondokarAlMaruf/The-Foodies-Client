@@ -5,7 +5,7 @@ import logo from "../Images/logo-the-foodies.png";
 const Header = () => {
   return (
     <div>
-      <div className="navbar bg-primary text-primary-content justify-between">
+      <div className="navbar bg-red-300 text-primary-content justify-between px-10">
         <div>
           <Link to={"/"}>
             <a className="btn btn-ghost normal-case text-xl">
