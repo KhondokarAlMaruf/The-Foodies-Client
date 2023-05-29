@@ -59,7 +59,7 @@ const Login = () => {
                 </button>
               </div>
               <Link className="btn btn-active btn-link" to={"/register"}>
-                New to The Foodies
+                New to The Foodies ? Please register
               </Link>
             </form>
           </div>
