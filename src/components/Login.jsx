@@ -50,6 +50,14 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn bg-pink-300">Login</button>
               </div>
+              <div className="space-x-5 ms-16">
+                <button className="btn btn-outline btn-secondary">
+                  Google
+                </button>
+                <button className="btn btn-outline btn-secondary">
+                  GitHub
+                </button>
+              </div>
               <Link className="btn btn-active btn-link" to={"/register"}>
                 New to The Foodies
               </Link>
