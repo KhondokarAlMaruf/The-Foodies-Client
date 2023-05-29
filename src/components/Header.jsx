@@ -1,9 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../Images/logo-the-foodies.png";
 
 const Header = () => {
   return (
     <div>
-      <h2>this is Header</h2>
+      <div className="navbar bg-primary text-primary-content justify-between">
+        <div>
+          <Link to={"/"}>
+            <a className="btn btn-ghost normal-case text-xl">
+              <img className="w-32 rounded" src={logo} alt="" />
+            </a>
+          </Link>
+        </div>
+        <div>
+          <Link to={"/"} className="btn btn-ghost normal-case text-xl">
+            Home
+          </Link>
+          <Link to={"/blog"} className="btn btn-ghost normal-case text-xl">
+            Blog
+          </Link>
+        </div>
+        <div>
+          <button className="border">
+            <Link to={"/login"} className="btn btn-ghost normal-case text-xl">
+              Login
+            </Link>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
