@@ -4,7 +4,7 @@ import banner from "../Images/banner.jpg";
 const Banner = () => {
   return (
     <div>
-      <div className="hero  rounded-lg mt-4">
+      <div className="hero bg-base-200 rounded-lg mt-4">
         <div className="hero-content flex-col lg:flex-row-reverse gap-8 md:gap-14 justify-between items-center">
           <div>
             <img
