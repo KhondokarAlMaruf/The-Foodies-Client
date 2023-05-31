@@ -2,12 +2,12 @@ import React from "react";
 
 const Chefs = ({ chef }) => {
   return (
-    <div className="flex flex-row">
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <div className="my-3">
+      <div className="card card-compact  w-96 bg-base-100 shadow-xl border-4 border-pink-300">
         <figure>
-          <img src={chef.chefPicture} />
+          <img className="h-72" src={chef.chefPicture} />
         </figure>
-        <div className="card-body">
+        <div className="card-body ">
           <h2 className="card-title">Name : {chef.chefName}</h2>
           <p>Years of experience: {chef.yearsOfExperience}</p>
           <p>Numbers of recipes : {chef.numberOfRecipes}</p>
