@@ -10,6 +10,7 @@ import Register from "./components/Register.jsx";
 import Login from "./components/Login.jsx";
 import Blog from "./components/Blog.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
+import ViewDetails from "./components/ViewDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/chef-recipes/:receipe_id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chefdata`)
+            .then((response) => response.json())
+            .then((data) => data.find((rcp) => rcp.id === params.receipe_id)),
+        element: <ViewDetails></ViewDetails>,
       },
     ],
   },
