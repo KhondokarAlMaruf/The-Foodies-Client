@@ -15,7 +15,7 @@ const Banner = () => {
           </div>
           <div className="w-full lg:w-full">
             <h1 className="text-4xl md:text-6xl font-semibold font-teko text-pink-300 leading-relaxed">
-              Welcome to <br /> World of <br />{" "}
+              Welcome to <br /> World of <br />
               <span className="text-fuchsia-900">Thai Foods</span>
             </h1>
             <p className="font-barlow my-4 md:my-8 w-11/12 text-xl leading-loose">

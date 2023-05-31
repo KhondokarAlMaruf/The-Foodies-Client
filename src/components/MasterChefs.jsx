@@ -12,7 +12,9 @@ const MasterChefs = () => {
   }, []);
   return (
     <div>
-      <h2>Master Chefs</h2>
+      <h2 className="text-4xl md:text-6xl font-semibold font-teko text-fuchsia-900 leading-relaxed text-center my-10">
+        Master Chefs
+      </h2>
       {chefs.map((chef) => (
         <Chefs key={chef.id} chef={chef}></Chefs>
       ))}
