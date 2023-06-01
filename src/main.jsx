@@ -11,6 +11,7 @@ import Login from "./components/Login.jsx";
 import Blog from "./components/Blog.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import ViewDetails from "./components/ViewDetails.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         element: <ViewDetails></ViewDetails>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound></NotFound>,
   },
 ]);
 
