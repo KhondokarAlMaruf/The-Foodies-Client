@@ -12,6 +12,7 @@ import Blog from "./components/Blog.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import ViewDetails from "./components/ViewDetails.jsx";
 import NotFound from "./components/NotFound.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/chefdata`)
             .then((response) => response.json())
             .then((data) => data.find((rcp) => rcp.id === params.receipe_id)),
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
       },
     ],
   },
