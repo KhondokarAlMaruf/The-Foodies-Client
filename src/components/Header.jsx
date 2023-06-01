@@ -4,7 +4,8 @@ import logo from "../Images/logo-the-foodies.png";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
-  const user = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <div>
       <div className="navbar bg-pink-300 text-primary-content justify-between px-10">
