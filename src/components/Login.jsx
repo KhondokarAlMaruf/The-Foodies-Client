@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
+  const provider = new GoogleAuthProvider();
 
   const handleLogIn = (event) => {
     event.preventDefault();
@@ -22,6 +24,17 @@ const Login = () => {
         console.log(error);
       });
   };
+
+  const handleSignInGoogle = () => {
+    signInWithGoogle(provider)
+      .then((result) => {
+        const user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -64,7 +77,10 @@ const Login = () => {
                 <button className="btn bg-pink-300">Login</button>
               </div>
               <div className="space-x-5 ms-16">
-                <button className="btn btn-outline btn-secondary">
+                <button
+                  onClick={handleSignInGoogle}
+                  className="btn btn-outline btn-secondary"
+                >
                   Google
                 </button>
                 <button className="btn btn-outline btn-secondary">

@@ -1,6 +1,6 @@
 .active {
-  background-color: blueviolet;
   margin-right: 10px;
   margin-left: 10px;
-  text-decoration: underline;
+
+  border-bottom: 2px solid red;
 }
