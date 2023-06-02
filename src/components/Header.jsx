@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Images/logo-the-foodies.png";
 import { AuthContext } from "../providers/AuthProvider";
+import ActiveLink from "./ActiveLink";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -22,17 +23,21 @@ const Header = () => {
           </Link>
         </div>
         <div>
-          <Link to={"/"} className="btn btn-ghost normal-case text-xl">
+          <ActiveLink to={"/"} className="btn btn-ghost normal-case text-xl">
             Home
-          </Link>
-          <Link to={"/blog"} className="btn btn-ghost normal-case text-xl">
+          </ActiveLink>
+          <ActiveLink
+            to={"/blog"}
+            className="btn btn-ghost normal-case text-xl"
+          >
             Blog
-          </Link>
+          </ActiveLink>
         </div>
         <div>
           <div>
             {user ? (
               <>
+                <img src={user.photo} alt="" />
                 <span> {user.email}</span>
                 <button
                   onClick={handleLogout}
