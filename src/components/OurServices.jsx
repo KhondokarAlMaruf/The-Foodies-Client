@@ -1,25 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 const OurServices = () => {
   return (
-    <div className="bg-base-200 my-10">
+    <div className="bg-base-200 my-10 pb-10 ms-5 ps-10 pr-10 mr-10">
       <div>
         <h2 className="text-center my-10 text-4xl md:text-6xl font-semibold font-teko text-pink-300 ">
           Our Services
         </h2>
       </div>
-      <div className="flex flex-row place-content-around my-10">
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <div className="card-body border-4 border-pink-300">
-            <h2 className="card-title">Master Chefs</h2>
-            <p>
-              A Master Chef is a professional cook who has reached the highest
-              level of culinary skill and expertise.
-            </p>
-            <div className="card-actions justify-end"></div>
-          </div>
-        </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 ">
+        <div className="card w-96 bg-base-100 shadow-xl mb-10  ">
           <div className="card-body  border-4 border-pink-300">
             <h2 className="card-title">Quality Food</h2>
             <p>
@@ -29,7 +20,7 @@ const OurServices = () => {
             <div className="card-actions justify-end"></div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-10">
           <div className="card-body  border-4 border-pink-300">
             <h2 className="card-title">Online Order</h2>
             <p>
@@ -39,7 +30,7 @@ const OurServices = () => {
             <div className="card-actions justify-end"></div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-10">
           <div className="card-body  border-4 border-pink-300">
             <h2 className="card-title">24/7 Service</h2>
             <p>

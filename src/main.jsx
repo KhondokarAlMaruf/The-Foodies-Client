@@ -39,7 +39,9 @@ const router = createBrowserRouter([
       {
         path: "/chef-recipes/:receipe_id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefdata`)
+          fetch(
+            `https://the-foodies-server-khondokaralmaruf.vercel.app/chefdata`
+          )
             .then((response) => response.json())
             .then((data) => data.find((rcp) => rcp.id === params.receipe_id)),
         element: (
@@ -61,7 +63,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <Toaster />
     </AuthProvider>
-    <Toaster />
   </React.StrictMode>
 );

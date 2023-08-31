@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Chefs = ({ chef }) => {
   return (
-    <div className="my-3">
+    <div className="my-3 mx-auto">
       <div className="card card-compact  w-96 bg-base-100 shadow-xl border-4 border-pink-300">
         <figure>
           <img className="h-72" src={chef.chefPicture} />

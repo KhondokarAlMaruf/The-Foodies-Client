@@ -8,8 +8,8 @@ const PeopleReview = () => {
           What People Are Saying
         </h2>
       </div>
-      <div className="flex flex-row place-content-around my-10">
-        <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 place-content-around ms-10 my-10">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5">
           <div className="card-body border-4 border-pink-300">
             <h2 className="card-title">Urassaya Sperbund</h2>
             <p>
@@ -21,7 +21,7 @@ const PeopleReview = () => {
             <div className="card-actions justify-end"></div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5">
           <div className="card-body  border-4 border-pink-300">
             <h2 className="card-title">Nadech Kugimiya</h2>
             <p>
@@ -34,7 +34,7 @@ const PeopleReview = () => {
             <div className="card-actions justify-end"></div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5">
           <div className="card-body  border-4 border-pink-300">
             <h2 className="card-title">Jirayu Tangsrisuk</h2>
             <p>
